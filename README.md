@@ -22,7 +22,7 @@ Control your downloads directly from Vicinae using Aria2 and yt-dlp. This extens
 
 ## Known Limitations
 
-* **No Live Progress:** Due to current UI limitations in Vicinae, the download progress bar does not update in real-time. Please use the **Refresh** action or **Cmd+R** to view the latest status.
+* **Static UI:** The UI displays task names and categorizes them by status (Active, Waiting/Paused, Complete).
 
 ## Development
 
