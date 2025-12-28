@@ -22,7 +22,8 @@ Control your downloads directly from Vicinae using Aria2 and yt-dlp. This extens
 
 ## Known Limitations
 
-* **Static UI:** The UI displays task names and categorizes them by status (Active, Waiting/Paused, Complete).
+* **Minimal UI:** The interface displays task names and status categories. Download speeds and progress percentages are not shown to avoid misleading static indicators.
+* **Status Polling:** Task statuses update automatically every 5 seconds. There may be a brief delay before seeing status changes (e.g., Active → Complete).
 
 ## Development
 
@@ -31,3 +32,4 @@ To run this extension locally:
 ```bash
 npm install
 npm run dev
+```

@@ -108,11 +108,19 @@ export default function Command() {
         }
     };
 
-    // Fetch downloads on connect (no continuous polling - Vicinae doesn't support live updates)
-    // Use Cmd+R to manually refresh
+
+    // Fetch downloads on connect and poll every 5 seconds for status updates
     useEffect(() => {
         if (!isConnected) return;
+
         loadDownloads();
+
+        // Poll every 5 seconds to update status (Active → Complete transitions)
+        const interval = setInterval(() => {
+            loadDownloads();
+        }, 5000);
+
+        return () => clearInterval(interval);
     }, [isConnected]);
 
     // Smart add download handler
